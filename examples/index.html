@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="../scripts/jquery.js"></script>
+        <script type="text/javascript" src="../scripts/jquery/readmarkup.js"></script>
+        <script type="text/javascript">
+            function readyState(){
+                $(window).bind('read.readMarkup', function( event, markup, parsed, original ){
+                    document.writeln(original);
+                    document.close();
+                });
+                $('div').readMarkup();
+            }
+            $(document).ready(readyState);
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div data-markup=" 'teste' ">TODO write content</div>
+    </body>
+</html>
